@@ -16,9 +16,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ButtonCmp title="login" onPress={() => console.log("tapped")} />
-    </View>
+      <WelcomeScreen />
   );
 }
 

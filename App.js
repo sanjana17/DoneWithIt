@@ -13,23 +13,17 @@ import AppText from "./app/components/AppText";
 import ButtonCmp from "./app/components/ButtonCmp";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Card from "./app/components/Card";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
+import Screen from "./app/components/screen";
+import Icon from "./app/components/Icon";
+import ListItemDeleteAction from "./app/components/ListItemDeleteAction";
+import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
+import ListingsScreen from "./app/screens/ListingsScreen";
 
 export default function App() {
-  return (
-    <View
-      style={{
-        backgroundColor: "#f8f4f4",
-        padding: 20,
-        paddingTop: 100,
-      }}
-    >
-      <Card
-        source={require("./app/assets/jacket.jpg")}
-        title="red jacket"
-        subTitle="$100"
-      />
-    </View>
-  );
+  return <ListingsScreen />;
 }
 
 const styles = StyleSheet.create({

@@ -4,7 +4,7 @@ import { FlatList, View } from "react-native";
 import ListItem from "../components/ListItem";
 import Screen from "../components/screen";
 import ListItemSeparator from "../components/ListItemSepartor";
-import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import ListItemDeleteAction from "../components/lists/ListItemDeleteAction";
 
 const intialMessages = [
   {
@@ -15,7 +15,8 @@ const intialMessages = [
   },
   {
     id: 2,
-    title: "T2",
+    title:
+      "hello haplapdpskdskdpsfdkdpfkdpfkdpfkpdkfpkgpfkgpfkgpfkgpfkgpfkgpfkpgkfpgkfpgkfpgkfpgkpfkgpfkgpfkgpfkgpfkpgkfpkgpfkpgkfpgkfpkgpfkgpfkgkfpgpfkgpfkgpfkgpkfpgkfpgfpgkfpgkpfkgpfk",
     description: "D2",
     image: require("../assets/mosh.jpg"),
   },

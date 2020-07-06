@@ -1,19 +1,23 @@
 import React from "react";
 import { Text, StyleSheet, Platform } from "react-native";
 
-export default function AppText(props) {
-  return <Text style={[styles.text, props.style]}>{props.children}</Text>;
+export default function AppText({ style, children, ...otherProps }) {
+  return (
+    <Text style={[styles.text, style]} {...otherProps}>
+      {children}
+    </Text>
+  );
 }
 
 const styles = StyleSheet.create({
   text: {
     ...Platform.select({
       ios: {
-        fontSize: 18,
+        fontSize: 15,
         fontFamily: "Avenir",
       },
       android: {
-        fontSize: 20,
+        fontSize: 18,
         fontFamily: "Roboto",
       },
     }),

@@ -2,9 +2,18 @@ import React from "react";
 import colors from "../config/colors";
 import { TouchableOpacity, StyleSheet, View, Text } from "react-native";
 
-export default function AppText(props) {
+export default function ButtonCmp(props) {
   return (
-    <TouchableOpacity style={[styles.button, { backgroundColor: props.color === undefined ? colors.primary: colors[props.color]}]} onPress={props.onPress} >
+    <TouchableOpacity
+      style={[
+        styles.button,
+        {
+          backgroundColor:
+            props.color === undefined ? colors.primary : colors[props.color],
+        },
+      ]}
+      onPress={props.onPress}
+    >
       <Text style={styles.text}>{props.title}</Text>
     </TouchableOpacity>
   );

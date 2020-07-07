@@ -12,7 +12,7 @@ import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 export default function App() {
   useEffect(() => {}, []);
-  return <ListingEditScreen></ListingEditScreen>;
+  return null;
 }
 
 const styles = StyleSheet.create({

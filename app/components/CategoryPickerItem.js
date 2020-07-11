@@ -5,10 +5,10 @@ import Icon from "./Icon";
 
 function CategoryPickerItem({ onPress, item }) {
   return (
-    <View onPress={onPress} style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <Icon name={item.iconName} backgroundColor={item.color} size={80} />
       <AppText style={styles.label}>{item.label}</AppText>
-    </View>
+    </TouchableOpacity>
   );
 }
 

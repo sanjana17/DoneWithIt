@@ -6,12 +6,17 @@ import {
   Button,
   Alert,
   View,
+  Image,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import ListingEditScreen from "./app/screens/ListingEditScreen";
+import Screen from "./app/components/screen";
+import ButtonCmp from "./app/components/ButtonCmp";
+import ImageInputList from "./app/components/ImageInputList";
 
 export default function App() {
-  useEffect(() => {}, []);
+  const [imageUris, setImageUris] = useState([]);
+
   return <ListingEditScreen></ListingEditScreen>;
 }
 

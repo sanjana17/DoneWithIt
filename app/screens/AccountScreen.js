@@ -1,11 +1,11 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import ListItem from "../components/ListItem";
+import ListItem from "../components/lists/ListItem";
 import Screen from "../components/screen";
 import { FlatList } from "react-native-gesture-handler";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
-import ListItemSeparator from "../components/ListItemSepartor";
+import ListItemSeparator from "../components/lists/ListItemSepartor";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const menuItems = [
@@ -22,10 +22,11 @@ const menuItems = [
       name: "email",
       backgroundColor: colors.secondary,
     },
+    navigation: "messages",
   },
 ];
 
-export default function AccountScreen(props) {
+export default function AccountScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
@@ -41,6 +42,7 @@ export default function AccountScreen(props) {
           keyExtractor={(item) => item.title}
           renderItem={({ item }) => (
             <ListItem
+              onPress={() => navigation.navigate(item.navigation)}
               title={item.title}
               ImageComponent={
                 <Icon

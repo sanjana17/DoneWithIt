@@ -1,30 +1,18 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  SafeAreaView,
-  Button,
-  Alert,
-  View,
-  Image,
-} from "react-native";
-import * as ImagePicker from "expo-image-picker";
-import ListingEditScreen from "./app/screens/ListingEditScreen";
+import { StyleSheet, Text, Button } from "react-native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Screen from "./app/components/screen";
-import ButtonCmp from "./app/components/ButtonCmp";
-import ImageInputList from "./app/components/ImageInputList";
+import { NavigationContainer } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import AuthNavigator from "./app/navigation/AuthNavigator";
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
-  const [imageUris, setImageUris] = useState([]);
-
-  return <ListingEditScreen></ListingEditScreen>;
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});

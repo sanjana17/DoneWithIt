@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Image, ImageBackground, StyleSheet, Text } from "react-native";
-import ButtonCmp from '../components/ButtonCmp';
+import ButtonCmp from "../components/ButtonCmp";
 
-export default function WelcomeScreen() {
+export default function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
       blurRadius={10}
@@ -14,8 +14,16 @@ export default function WelcomeScreen() {
         <Text style={styles.tagline}>Sell what you Don't Need</Text>
       </View>
       <View style={styles.buttonContainer}>
-      <ButtonCmp title="login" color="primary"></ButtonCmp>
-      <ButtonCmp title="register" color="secondary"></ButtonCmp> 
+        <ButtonCmp
+          title="login"
+          color="primary"
+          onPress={() => navigation.navigate("LoginScreen")}
+        ></ButtonCmp>
+        <ButtonCmp
+          title="register"
+          color="secondary"
+          onPress={() => navigation.navigate("RegisterScreen")}
+        ></ButtonCmp>
       </View>
     </ImageBackground>
   );
@@ -27,9 +35,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
-  buttonContainer:{
+  buttonContainer: {
     padding: 20,
-    width:'100%',
+    width: "100%",
   },
   loginButton: {
     width: "100%",
@@ -50,9 +58,9 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: "#4ECDC4",
   },
-  tagline:{
+  tagline: {
     fontSize: 25,
     paddingVertical: 20,
-    fontWeight: '600',
-  }
+    fontWeight: "600",
+  },
 });
